@@ -6,32 +6,41 @@
     <title>NoteWave - Focus on learning, not note-taking</title>
     <meta name="description" content="NoteWave is an AI-powered academic note-taking app designed specifically for university students.">
     <link rel="stylesheet" href="styles.css">
+    <script src="components.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">NoteWave</a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="market.html">Market</a></li>
-                <li><a href="business.html">Business</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav-bar></nav-bar>
 
     <main>
         <section class="hero">
-            
-            
+            <h1>Focus on learning, not note-taking.</h1>
+            <p>Your AI Notetaking app built for the modern lecture hall.</p>
+            <a href="contact.html" class="btn">Join the Waitlist</a>
         </section>
 
+        <section>
+            <h2>Key Features</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Real-time Transcription</h3>
+                    <p>Accurate, near-instant transcriptions even in noisy environments with complex audio and strong accents.</p>
+                </div>
+                <div class="card">
+                    <h3>AI-Powered Summaries</h3>
+                    <p>Get structured, easy-to-read academic summaries automatically generated from your lecture recordings.</p>
+                </div>
+                <div class="card">
+                    <h3>Minimal UI</h3>
+                    <p>A distraction-free, minimal interface designed to keep your focus entirely on the lecture, not the app.</p>
+                </div>
+                <div class="card">
+                    <h3>Lecture Hall Ready</h3>
+                    <p>Purpose-built to handle the acoustic challenges and background noise of large university lecture halls.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 NoteWave. All rights reserved.</p>
-    </footer>
+    <site-footer></site-footer>
 </body>
 </html>

@@ -5,34 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - NoteWave</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="components.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">NoteWave</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="market.html">Market</a></li>
-                <li><a href="business.html">Business</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav-bar></nav-bar>
 
     <main>
         <section class="card">
             <h2>About NoteWave</h2>
-            <p><strong>Value Proposition:</strong> NoteWave</p>
+            <p><strong>Value Proposition:</strong> NoteWave is built specifically for big lecture halls. It empowers students to fully engage in the lecture and releases the stress of having to take fast-paced, complex notes.</p>
             
             <h3 style="margin-top: 2rem;">How it Works</h3>
-            
+            <p>Our application leverages cutting-edge technology to deliver near real-time, highly accurate transcriptions and structured learning materials.</p>
+            <ul>
+                <li><strong>Frontend:</strong> React, providing a snappy, responsive, and minimal user interface across all devices.</li>
+                <li><strong>Backend:</strong> Python, handling robust data processing, audio streaming, and API integrations securely.</li>
+                <li><strong>AI Integration:</strong> Utilizing the OpenAI Whisper API to ensure exceptional transcription quality, successfully interpreting complex academic vocabulary and strong accents in real-time.</li>
+            </ul>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 NoteWave. All rights reserved.</p>
-    </footer>
+    <site-footer></site-footer>
 </body>
 </html>
