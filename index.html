@@ -14,33 +14,223 @@
     <main>
         <section class="hero">
             <h1>Focus on learning, not note-taking.</h1>
-            <p>Your AI Notetaking app built for the modern lecture hall.</p>
-            <a href="contact.html" class="btn">Join the Waitlist</a>
+            <p>Your AI Notetaking app built for the lecture hall.</p>
+            <div class="hero-interactive">
+                <a href="contact.html" class="btn btn-hero">Join the Waitlist</a>
+                <div class="hero-visuals">
+                    <img src="hand-left.png" alt="Left Hand" class="visual-hand visual-hand-left">
+                    <div class="macbook-wrapper">
+                        <img src="macbook-view.png" alt="NoteWave App on MacBook" class="visual-macbook">
+                    </div>
+                    <img src="hand-right.png" alt="Right Hand" class="visual-hand visual-hand-right">
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Key Features</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Real-time Transcription</h3>
-                    <p>Accurate, near-instant transcriptions even in noisy environments with complex audio and strong accents.</p>
+        <section class="feature-recording">
+            <div class="recording-layout">
+                <div class="recording-container">
+                    <div class="transcription-display">
+                        <p id="transcription-text" class="placeholder-text">Your transcribed text will appear here. Press the red record button to begin...</p>
+                    </div>
+                    <div class="recording-controls-wrapper">
+                        <div class="recording-controls">
+                            <button class="control-btn" aria-label="Undo">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 14 4 9 9 4"></polyline><path d="M20 20v-7a4 4 0 0 0-4-4H4"></path></svg>
+                            </button>
+                            <button class="control-btn" aria-label="Skip Back">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                            </button>
+                            <button id="record-btn" class="record-btn-big" aria-label="Record">
+                                <div class="record-inner"></div>
+                            </button>
+                            <button class="control-btn" aria-label="Play">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            </button>
+                            <button class="control-btn" aria-label="Redo">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 14 20 9 15 4"></polyline><path d="M4 20v-7a4 4 0 0 1 4-4h12"></path></svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>AI-Powered Summaries</h3>
-                    <p>Get structured, easy-to-read academic summaries automatically generated from your lecture recordings.</p>
+                <div class="recording-features slide-in-right">
+                    <h3>Real-Time Transcription</h3>
+                    <p>Notewave will convert your lectures into high accurate text instantly. It filters background chatter in large lecture halls, perfect for uni environment.</p>
                 </div>
-                <div class="card">
-                    <h3>Minimal UI</h3>
-                    <p>A distraction-free, minimal interface designed to keep your focus entirely on the lecture, not the app.</p>
+            </div>
+        </section>
+
+        <section class="feature-summarize">
+            <div class="summarize-header">
+                <h2>AI-Powered Summaries</h2>
+                <p>Turn hours of lectures into instantly readable study guides.</p>
+            </div>
+            <div class="summarize-layout">
+                <div class="summarize-box original-text-box">
+                    <div class="box-badge">Live Transcript</div>
+                    <div class="box-content">
+                        <p>"...so the key to digital innovation isn't just about adopting new technology. It's about fundamentally changing how your business operates and delivers value. For example, if you just digitize a bad process, you have a bad digital process. Instead, you need to use AI, automation, and data analytics to rethink the customer experience from the ground up. This shift requires both cultural change and technical execution. Next week we will cover the specific frameworks for implementing these changes..."</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Lecture Hall Ready</h3>
-                    <p>Purpose-built to handle the acoustic challenges and background noise of large university lecture halls.</p>
+                <div class="summarize-action">
+                    <button id="trigger-summarize" class="btn-summarize">
+                        <span class="btn-text">Summarize</span>
+                        <span class="btn-loader hidden"></span>
+                    </button>
+                </div>
+                <div class="summarize-box summary-text-box">
+                    <div class="box-badge badge-ai">NoteWave Summary</div>
+                    <div class="box-content" id="summary-output">
+                        <div class="placeholder-state">
+                            <p>Click "Summarize" to see NoteWave in action.</p>
+                        </div>
+                        <div class="loading-state hidden">
+                            <div class="skeleton-line"></div>
+                            <div class="skeleton-line"></div>
+                            <div class="skeleton-line w-75"></div>
+                            <br>
+                            <div class="skeleton-line"></div>
+                            <div class="skeleton-line w-50"></div>
+                        </div>
+                        <div class="result-state hidden">
+                            <h4>Lecture: Digital Innovation</h4>
+                            <ul>
+                                <li><strong>Core Concept:</strong> It's about fundamentally changing business operations and value delivery, not just adopting tech.</li>
+                                <li><strong>Pitfall:</strong> Digitizing a bad process just creates a bad digital process.</li>
+                                <li><strong>Solution:</strong> Use AI, automation, and analytics to rebuild the customer experience.</li>
+                                <li><strong>Requirements:</strong> Needs both cultural shift and technical execution.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <site-footer></site-footer>
+
+    <script>
+        // Scroll zoom logic
+        document.addEventListener('scroll', () => {
+            const macbook = document.querySelector('.visual-macbook');
+            if (macbook) {
+                const scrollY = window.scrollY;
+                let scale = 1 + (scrollY * 0.001);
+                scale = Math.min(scale, 1.3);
+                macbook.style.transform = `scale(${scale})`;
+            }
+        });
+
+        // Speech Recognition Logic
+        const recordBtn = document.getElementById('record-btn');
+        const transcriptionText = document.getElementById('transcription-text');
+        
+        let recognition;
+        let isRecording = false;
+
+        // Check for browser support
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.continuous = true;
+            recognition.interimResults = true; // Show words as they are being spoken
+
+            recognition.onresult = (event) => {
+                let finalTranscript = '';
+                let interimTranscript = '';
+
+                for (let i = event.resultIndex; i < event.results.length; ++i) {
+                    if (event.results[i].isFinal) {
+                        finalTranscript += event.results[i][0].transcript;
+                    } else {
+                        interimTranscript += event.results[i][0].transcript;
+                    }
+                }
+                
+                // Wrap final and interim text to style them differently
+                transcriptionText.innerHTML = '<span class="final-text">' + finalTranscript + '</span><span class="interim-text">' + interimTranscript + '</span>';
+                transcriptionText.classList.remove('placeholder-text');
+            };
+
+            recognition.onerror = (event) => {
+                console.error('Speech recognition error', event.error);
+                if(event.error === 'not-allowed') {
+                    transcriptionText.innerText = "Microphone access denied. Please allow microphone permissions in your browser to try the demo.";
+                }
+            };
+            
+            recognition.onend = () => {
+                // Autorestart if it stops randomly but the user didn't hit stop
+                if(isRecording) {
+                    recognition.start(); 
+                }
+            };
+
+            recordBtn.addEventListener('click', () => {
+                if (isRecording) {
+                    recognition.stop();
+                    recordBtn.classList.remove('recording');
+                } else {
+                    recognition.start();
+                    recordBtn.classList.add('recording');
+                    transcriptionText.innerHTML = '<span class="interim-text">Listening... Start speaking.</span>';
+                    transcriptionText.classList.remove('placeholder-text');
+                }
+                isRecording = !isRecording;
+            });
+        } else {
+            // Fallback if the browser doesn't support Web Speech API
+            recordBtn.style.display = 'none';
+            transcriptionText.innerText = "Sorry, your current browser doesn't support the Web Speech API. Please try this demo in Google Chrome, Safari, or Microsoft Edge.";
+        }
+
+        // Scroll Reveal Animation Logic
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2 // Trigger when 20% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        const fadeElements = document.querySelectorAll('.slide-in-right');
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Summarize Button Logic
+        const summarizeBtn = document.getElementById('trigger-summarize');
+        const summaryOutput = document.getElementById('summary-output');
+        
+        if (summarizeBtn && summaryOutput) {
+            const placeholderState = summaryOutput.querySelector('.placeholder-state');
+            const loadingState = summaryOutput.querySelector('.loading-state');
+            const resultState = summaryOutput.querySelector('.result-state');
+            const btnText = summarizeBtn.querySelector('.btn-text');
+            const btnLoader = summarizeBtn.querySelector('.btn-loader');
+
+            summarizeBtn.addEventListener('click', () => {
+                // Show loading states
+                btnText.classList.add('hidden');
+                btnLoader.classList.remove('hidden');
+                placeholderState.classList.add('hidden');
+                resultState.classList.add('hidden');
+                loadingState.classList.remove('hidden');
+
+                // Wait 2 seconds, then show result
+                setTimeout(() => {
+                    btnText.classList.remove('hidden');
+                    btnLoader.classList.add('hidden');
+                    loadingState.classList.add('hidden');
+                    resultState.classList.remove('hidden');
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
