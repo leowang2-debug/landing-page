@@ -5,26 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - NoteWave</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/components.js" defer></script>
 </head>
 <body>
-    <nav-bar></nav-bar>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">NoteWave</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="market.html">Market</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section class="card">
-            <h2>About NoteWave</h2>
-            <p><strong>Value Proposition:</strong> NoteWave is built specifically for big lecture halls. It empowers students to fully engage in the lecture and releases the stress of having to take fast-paced, complex notes.</p>
+            <div class="card-text">
+                <h2>About NoteWave</h2>
+                <h3>AI-powered note-taking built for large lecture environments</h3>
+            </div>
+
+            <div class="right-img">
+                <img src="images/App_logo.png" alt="Poster">
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>The Friction</h2>
+            <h3 style="margin-top: 2rem;">The Challenge</h3>
+            <p>Many students struggle to balance <strong>active listening and note-taking</strong> during fast-paced lectures, particularly in large lecture halls or when audio clarity is reduced. As a result, students often produce <strong>incomplete or low-quality notes</strong>, which negatively impacts their understanding and revision.</p>
+            <h3 style="margin-top: 2rem;">Our Solution</h3>
+            <p><strong>NoteWave is an AI-powered platform</strong> that records lectures, transcribes them in real time, and converts them into <strong>structured summaries and easy-to-review academic notes</strong>, allowing students to focus on understanding rather than writing.</p>
+        </section>
+
+        <section class="card">
+            <h2>Core Innovation</h2>
+            <p><strong>Value Proposition: </strong>NoteWave is designed specifically for <strong>large lecture environments</strong>, enabling students to <strong>engage fully with lecture content</strong> while reducing the <strong>cognitive load of rapid note-taking</strong>.</p>
             
             <h3 style="margin-top: 2rem;">How it Works</h3>
-            <p>Our application leverages cutting-edge technology to deliver near real-time, highly accurate transcriptions and structured learning materials.</p>
+            <p>NoteWave leverages <strong>advanced AI technologies</strong> to deliver <strong>near real-time, highly accurate transcription</strong> and <strong>structured learning materials</strong>.</p>
             <ul>
                 <li><strong>Frontend:</strong> React, providing a snappy, responsive, and minimal user interface across all devices.</li>
                 <li><strong>Backend:</strong> Python, handling robust data processing, audio streaming, and API integrations securely.</li>
                 <li><strong>AI Integration:</strong> Utilizing the OpenAI Whisper API to ensure exceptional transcription quality, successfully interpreting complex academic vocabulary and strong accents in real-time.</li>
             </ul>
+            
+            <h3 style="margin-top: 2rem;">How Student Use NoteWave</h3>
+            <ul>
+                <li>Record lecture</li>
+                <li>AI transcribes in real time</li>
+                <li>Notes are structured automatically</li>
+                <li>Review and search later</li>
+            </ul>
+
+            <h3 style="margin-top: 2rem;">For Universities & Lecturers</h3>
+            <ul>
+                <li>Enables lecturers to <strong>record and share lecture content</strong></li>
+                <li>Allows students to <strong>Allows students to access missed lectures anytime</strong></li>
+                <li>Supports <strong>inclusive and accessible learning environments</strong></li>
+            </ul>
         </section>
+
+        <section class="card">
+            <h2>Target Audience</h2>
+            <p>NoteWave is designed for <strong>university students in large lecture settings</strong> who require <strong>accurate, real-time transcription and structured notes</strong>. It is particularly valuable for <strong>international students and students who require accessible learning support</strong>.</p>
+        </section>
+
+        <section class="card">
+            <h2>Revenue Model</h2>
+            <p>NoteWave operates on a <strong>freemium model</strong>, offering basic transcription for free while providing <strong>premium features such as advanced summaries, unlimited recordings, and export options</strong> for €5/month. Additional revenue is generated through advertisements and university partnerships.</p>
+            
+            <h3 style="margin-top: 2rem;">Pricing & Plans</h3>
+            <ul>
+                <li>Free version with limited transcription minutes</li>
+                <li>Premium plan (€5/month) for unlimited features</li>
+                <li>Advertisement support for free users</li>
+                <li>University licensing partnerships</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Why Choose NoteWave</h2>
+            <h3 style="margin-top: 2rem;">What Makes Us Different</h3>
+            <ul>
+                <li>Built specifically for <strong>lecture environments</strong></li>
+                <li>Handles <strong>strong accents and noisy classrooms</strong></li>
+                <li>Generates <strong>structured academic notes (not just transcripts)</strong></li>
+                <li>Offers <strong>affordable pricing compared to competitors</strong> like Otter.ai (Up to 40% cheaper than competitors like Otter.ai)</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Why It Will Succeed</h2>
+            <p>The <strong>increasing scale of university lectures</strong> and the growing demand for <strong>AI-powered educational tools</strong> create a strong opportunity for NoteWave. Its <strong>cost-effective model</strong> and potential for <strong>institutional partnerships</strong> support scalable adoption.</p>
+        </section>
+
+        <section class="card">
+            <h2>Market Opportunity</h2>
+            <ul>
+                <li><strong>30-50 million potential users globally</strong></li>
+                <li>Growth in <strong>AI-powered learning tools</strong></li>
+                <li>Expansion of <strong>English-taught university programmes</strong></li>
+                <li>Strong <strong>revenue potential through subscriptions and partnerships</strong></li>
+            </ul>
+        </section>
+
     </main>
 
-    <site-footer></site-footer>
+    <footer>
+        <p>&copy; 2026 NoteWave. All rights reserved.</p>
+    </footer>
 </body>
 </html>
