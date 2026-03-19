@@ -654,3 +654,29 @@ li {
         gap: 3rem;
     }
 }
+
+
+/* Leo added CSS */
+.right-img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25%;         
+    text-align: right;
+}
+
+.card::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.right-img img {
+    width: 200px;
+    height: auto;
+}
+
+.card-text {
+    display: inline-block; 
+    width: 70%;             
+    vertical-align: middle;
+}
