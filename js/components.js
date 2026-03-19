@@ -7,8 +7,8 @@ class NavBar extends HTMLElement {
         this.innerHTML = `
             <header>
                 <nav>
-                    <a href="index.html" class="logo">
-                        <img src="notewave_logo.png" alt="NoteWave Logo">
+                    <a href="./index.html" class="logo">
+                        <img src="./images/notewave_logo.png" alt="NoteWave Logo">
                         NoteWave
                     </a>
                     <ul class="nav-links">
