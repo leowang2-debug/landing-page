@@ -981,3 +981,61 @@ li {
         flex-direction: column;
     }
 }
+
+/* ===== Spacing between sections (cards) ===== */
+.card,
+.hero-card,
+.cta-card,
+.highlight-section {
+    margin-bottom: 2rem;   /* space between boxes */
+}
+
+/* Extra breathing space for big sections */
+section {
+    margin-bottom: 2.5rem;
+}
+
+.card {
+    padding: 2rem;   
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+.card p {
+    margin-bottom: 1rem;
+}
+
+.content-grid.two-column,
+.split-section {
+    gap: 2rem;   
+}
+
+.feature-grid {
+    gap: 1.5rem;
+}
+
+.styled-list li,
+.icon-list li {
+    margin-bottom: 0.8rem;
+}
+
+.jump-links {
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.section-label {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    section {
+        margin-bottom: 2rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+}
