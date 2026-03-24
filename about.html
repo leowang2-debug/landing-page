@@ -4,102 +4,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - NoteWave</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="./js/components.js" defer></script>
 </head>
 <body>
     <nav-bar></nav-bar>
 
-    <main>
-        <section class="card">
-            <div class="card-text">
-                <h2>About NoteWave</h2>
-                <h3>AI-powered note-taking built for large lecture environments</h3>
+    <main class="container">
+
+        <section class="hero-card">
+            <div class="hero-text">
+                <p class="eyebrow">About NoteWave</p>
+                <h1>AI-powered note-taking built for large lecture environments</h1>
+                <p class="hero-description">
+                    NoteWave helps students focus on learning by turning fast-paced lectures
+                    into real-time transcripts, structured summaries, and easy-to-review academic notes.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#innovation" class="btn btn-primary">Explore Innovation</a>
+                    <a href="#revenue" class="btn btn-secondary">View Business Model</a>
+                </div>
             </div>
 
-            <div class="right-img">
-                <img src="images/notewave_logo.png" alt="NoteWave Logo">
+            <div class="hero-image">
+                <img src="images/notewave_logo.png" alt="NoteWave logo">
             </div>
         </section>
 
-        <section class="card">
+        <section class="stats-grid">
+            <div class="stat-box">
+                <h3>30-50M</h3>
+                <p>Potential users globally</p>
+            </div>
+            <div class="stat-box">
+                <h3>€5/month</h3>
+                <p>Student-friendly premium plan</p>
+            </div>
+            <div class="stat-box">
+                <h3>Real-time</h3>
+                <p>Lecture transcription and summaries</p>
+            </div>
+            <div class="stat-box">
+                <h3>Built for</h3>
+                <p>Large lecture environments</p>
+            </div>
+        </section>
+
+        <section class="jump-links card">
+            <a href="#friction">Friction</a>
+            <a href="#innovation">Innovation</a>
+            <a href="#audience">Audience</a>
+            <a href="#revenue">Revenue</a>
+            <a href="#opportunity">Opportunity</a>
+        </section>
+
+        <section class="card" id="friction">
+            <p class="section-label">Problem &amp; Solution</p>
             <h2>The Friction</h2>
-            <h3 style="margin-top: 2rem;">The Challenge</h3>
-            <p>Many students struggle to balance <strong>active listening and note-taking</strong> during fast-paced lectures, particularly in large lecture halls or when audio clarity is reduced. As a result, students often produce <strong>incomplete or low-quality notes</strong>, which negatively impacts their understanding and revision.</p>
-            <h3 style="margin-top: 2rem;">Our Solution</h3>
-            <p><strong>NoteWave is an AI-powered platform</strong> that records lectures, transcribes them in real time, and converts them into <strong>structured summaries and easy-to-review academic notes</strong>, allowing students to focus on understanding rather than writing.</p>
+
+            <div class="content-grid two-column">
+                <div>
+                    <h3 class="section-title">The Challenge</h3>
+                    <p>
+                        Many students struggle to balance <strong>active listening and note-taking</strong>
+                        during fast-paced lectures, particularly in large lecture halls or when audio clarity
+                        is reduced. As a result, students often produce <strong>incomplete or low-quality notes</strong>,
+                        which negatively impacts their understanding and revision.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="section-title">Our Solution</h3>
+                    <p>
+                        <strong>NoteWave is an AI-powered platform</strong> that records lectures,
+                        transcribes them in real time, and converts them into
+                        <strong>structured summaries and easy-to-review academic notes</strong>,
+                        allowing students to focus on understanding rather than writing.
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <section class="card">
+        <section class="card" id="innovation">
+            <p class="section-label">Product Innovation</p>
             <h2>Core Innovation</h2>
-            <p><strong>Value Proposition: </strong>NoteWave is designed specifically for <strong>large lecture environments</strong>, enabling students to <strong>engage fully with lecture content</strong> while reducing the <strong>cognitive load of rapid note-taking</strong>.</p>
-            
-            <h3 style="margin-top: 2rem;">How it Works</h3>
-            <p>NoteWave leverages <strong>advanced AI technologies</strong> to deliver <strong>near real-time, highly accurate transcription</strong> and <strong>structured learning materials</strong>.</p>
-            <ul>
+
+            <p class="lead-text">
+                <strong>Value Proposition:</strong> NoteWave is designed specifically for
+                <strong>large lecture environments</strong>, enabling students to
+                <strong>engage fully with lecture content</strong> while reducing the
+                <strong>cognitive load of rapid note-taking</strong>.
+            </p>
+
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <h3>⚡ Real-Time Transcription</h3>
+                    <p>Capture lecture content as it happens with near real-time processing.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>📝 Structured Summaries</h3>
+                    <p>Convert raw transcription into usable academic notes and key points.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>🎓 Lecture-Focused Design</h3>
+                    <p>Built specifically for large classes, strong accents, and noisy rooms.</p>
+                </div>
+            </div>
+
+            <h3 class="section-title">How It Works</h3>
+            <p>
+                NoteWave leverages <strong>advanced AI technologies</strong> to deliver
+                <strong>near real-time, highly accurate transcription</strong> and
+                <strong>structured learning materials</strong>.
+            </p>
+
+            <ul class="styled-list">
                 <li><strong>Frontend:</strong> React, providing a snappy, responsive, and minimal user interface across all devices.</li>
                 <li><strong>Backend:</strong> Python, handling robust data processing, audio streaming, and API integrations securely.</li>
                 <li><strong>AI Integration:</strong> Utilizing the OpenAI Whisper API to ensure exceptional transcription quality, successfully interpreting complex academic vocabulary and strong accents in real-time.</li>
             </ul>
-            
-            <h3 style="margin-top: 2rem;">How Student Use NoteWave</h3>
-            <ul>
-                <li>Record lecture</li>
-                <li>AI transcribes in real time</li>
-                <li>Notes are structured automatically</li>
-                <li>Review and search later</li>
-            </ul>
 
-            <h3 style="margin-top: 2rem;">For Universities & Lecturers</h3>
-            <ul>
-                <li>Enables lecturers to <strong>record and share lecture content</strong></li>
-                <li>Allows students to <strong>Allows students to access missed lectures anytime</strong></li>
-                <li>Supports <strong>inclusive and accessible learning environments</strong></li>
-            </ul>
+            <div class="content-grid two-column top-gap">
+                <div>
+                    <h3 class="section-title">How Students Use NoteWave</h3>
+                    <ul class="icon-list">
+                        <li>🎤 Record lecture</li>
+                        <li>🤖 AI transcribes in real time</li>
+                        <li>📝 Notes are structured automatically</li>
+                        <li>🔍 Review and search later</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="section-title">For Universities &amp; Lecturers</h3>
+                    <ul class="icon-list">
+                        <li>🎓 Enables lecturers to <strong>record and share lecture content</strong></li>
+                        <li>📚 Allows students to <strong>access missed lectures anytime</strong></li>
+                        <li>♿ Supports <strong>inclusive and accessible learning environments</strong></li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section class="card">
-            <h2>Target Audience</h2>
-            <p>NoteWave is designed for <strong>university students in large lecture settings</strong> who require <strong>accurate, real-time transcription and structured notes</strong>. It is particularly valuable for <strong>international students and students who require accessible learning support</strong>.</p>
+        <section class="split-section">
+            <div class="card" id="audience">
+                <p class="section-label">Who It Serves</p>
+                <h2>Target Audience</h2>
+                <p>
+                    NoteWave is designed for <strong>university students in large lecture settings</strong>
+                    who require <strong>accurate, real-time transcription and structured notes</strong>.
+                    It is particularly valuable for <strong>international students</strong> and
+                    <strong>students who require accessible learning support</strong>.
+                </p>
+            </div>
+
+            <div class="card" id="revenue">
+                <p class="section-label">Business Model</p>
+                <h2>Revenue Model</h2>
+                <p>
+                    NoteWave operates on a <strong>freemium model</strong>, offering basic transcription
+                    for free while providing <strong>premium features such as advanced summaries,
+                    unlimited recordings, and export options</strong> for €5/month.
+                    Additional revenue is generated through advertisements and university partnerships.
+                </p>
+
+                <h3 class="section-title">Pricing &amp; Plans</h3>
+                <ul class="styled-list">
+                    <li>Free version with limited transcription minutes</li>
+                    <li>Premium plan (€5/month) for unlimited features</li>
+                    <li>Advertisement support for free users</li>
+                    <li>University licensing partnerships</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="card">
-            <h2>Revenue Model</h2>
-            <p>NoteWave operates on a <strong>freemium model</strong>, offering basic transcription for free while providing <strong>premium features such as advanced summaries, unlimited recordings, and export options</strong> for €5/month. Additional revenue is generated through advertisements and university partnerships.</p>
-            
-            <h3 style="margin-top: 2rem;">Pricing & Plans</h3>
-            <ul>
-                <li>Free version with limited transcription minutes</li>
-                <li>Premium plan (€5/month) for unlimited features</li>
-                <li>Advertisement support for free users</li>
-                <li>University licensing partnerships</li>
-            </ul>
+        <section class="highlight-section">
+            <div class="highlight-inner">
+                <p class="section-label light">Competitive Advantage</p>
+                <h2>Why Choose NoteWave</h2>
+
+                <div class="advantage-grid">
+                    <div class="advantage-card">
+                        <h3>🏛 Lecture-Focused</h3>
+                        <p>Built specifically for lecture environments rather than general meetings.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <h3>🔊 Accent &amp; Noise Ready</h3>
+                        <p>Handles strong accents and noisy classrooms more effectively.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <h3>📖 Structured Output</h3>
+                        <p>Generates structured academic notes, not just plain transcripts.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <h3>💸 Affordable Pricing</h3>
+                        <p>Offers student-friendly pricing, up to 40% cheaper than Otter.ai.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="card">
-            <h2>Why Choose NoteWave</h2>
-            <h3 style="margin-top: 2rem;">What Makes Us Different</h3>
-            <ul>
-                <li>Built specifically for <strong>lecture environments</strong></li>
-                <li>Handles <strong>strong accents and noisy classrooms</strong></li>
-                <li>Generates <strong>structured academic notes (not just transcripts)</strong></li>
-                <li>Offers <strong>affordable pricing compared to competitors</strong> like Otter.ai (Up to 40% cheaper than competitors like Otter.ai)</li>
-            </ul>
+        <section class="split-section">
+            <div class="card">
+                <p class="section-label">Scalability</p>
+                <h2>Why It Will Succeed</h2>
+                <p>
+                    The <strong>increasing scale of university lectures</strong> and the growing demand for
+                    <strong>AI-powered educational tools</strong> create a strong opportunity for NoteWave.
+                    Its <strong>cost-effective model</strong> and potential for
+                    <strong>institutional partnerships</strong> support scalable adoption.
+                </p>
+            </div>
+
+            <div class="card" id="opportunity">
+                <p class="section-label">Growth Potential</p>
+                <h2>Market Opportunity</h2>
+                <ul class="icon-list">
+                    <li>🌍 <strong>30–50 million potential users globally</strong></li>
+                    <li>📈 Growth in <strong>AI-powered learning tools</strong></li>
+                    <li>🎓 Expansion of <strong>English-taught university programmes</strong></li>
+                    <li>💰 Strong <strong>revenue potential through subscriptions and partnerships</strong></li>
+                </ul>
+            </div>
         </section>
 
-        <section class="card">
-            <h2>Why It Will Succeed</h2>
-            <p>The <strong>increasing scale of university lectures</strong> and the growing demand for <strong>AI-powered educational tools</strong> create a strong opportunity for NoteWave. Its <strong>cost-effective model</strong> and potential for <strong>institutional partnerships</strong> support scalable adoption.</p>
-        </section>
-
-        <section class="card">
-            <h2>Market Opportunity</h2>
-            <ul>
-                <li><strong>30-50 million potential users globally</strong></li>
-                <li>Growth in <strong>AI-powered learning tools</strong></li>
-                <li>Expansion of <strong>English-taught university programmes</strong></li>
-                <li>Strong <strong>revenue potential through subscriptions and partnerships</strong></li>
-            </ul>
+        <section class="cta-card">
+            <h2>Ready to transform lecture note-taking?</h2>
+            <p>
+                NoteWave helps students focus on learning while AI handles transcription,
+                structured summaries, and academic note organisation.
+            </p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                <a href="index.html" class="btn btn-secondary">Back to Home</a>
+            </div>
         </section>
 
     </main>
