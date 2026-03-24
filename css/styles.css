@@ -777,6 +777,7 @@ th {
     background: var(--light-gray);
     font-weight: 600;
 
+}
 .btn-secondary:hover {
     background: #f8fafc;
 }
