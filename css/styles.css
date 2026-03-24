@@ -982,15 +982,13 @@ li {
     }
 }
 
-/* ===== Spacing between sections (cards) ===== */
 .card,
 .hero-card,
 .cta-card,
 .highlight-section {
-    margin-bottom: 2rem;   /* space between boxes */
+    margin-bottom: 2rem;  
 }
 
-/* Extra breathing space for big sections */
 section {
     margin-bottom: 2.5rem;
 }
