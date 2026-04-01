@@ -1052,5 +1052,78 @@ section {
 
     .card {
         padding: 1.5rem;
+        /* FOOTER */
+
+#footer-layout {
+    background: var(--dark-slate);
+    color: var(--white);
+    padding: 1.5rem 5%;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-text {
+    color: #adb5bd;
+    font-size: 0.9rem;
+}
+
+.footer-separator {
+    color: #555e6b;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+}
+
+#footer-layout a {
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+#footer-layout a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+#footer-layout a:hover .footer-text {
+    color: var(--white);
+}
+
+/* Logo */
+
+.contact-logo {
+    display: block;
+    border-radius: 8px;
+    opacity: 0.85;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.contact-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .newsletter {
+        padding: 3rem 5%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-logo {
+        margin-top: 1rem;
+    }
+}
     }
 }
