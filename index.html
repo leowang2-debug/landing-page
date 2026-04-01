@@ -27,10 +27,31 @@
 
     <main>
         <section class="hero">
+            <div class="hero-background">
+                <span class="hero-orb hero-orb-one"></span>
+                <span class="hero-orb hero-orb-two"></span>
+            </div>
+            <p class="hero-eyebrow">Built for university lectures</p>
             <h1>Focus on learning, not note-taking.</h1>
-            <p>Your AI Notetaking app built for the lecture hall.</p>
-            <div class="hero-interactive">
+            <p>Your AI note-taking app for capturing lectures and turning messy notes into study material.</p>
+            <div class="hero-actions">
                 <a href="./contact.html" class="btn btn-hero">Join the Waitlist</a>
+            </div>
+            <div class="hero-stats reveal-up">
+                <div class="hero-stat" style="--delay: 0s;">
+                    <span class="hero-stat-value">Live</span>
+                    <span class="hero-stat-label">Lecture transcription</span>
+                </div>
+                <div class="hero-stat" style="--delay: 0.08s;">
+                    <span class="hero-stat-value">AI</span>
+                    <span class="hero-stat-label">Structured summaries</span>
+                </div>
+                <div class="hero-stat" style="--delay: 0.16s;">
+                    <span class="hero-stat-value">Quiz</span>
+                    <span class="hero-stat-label">Practice questions</span>
+                </div>
+            </div>
+            <div class="hero-interactive">
                 <div class="hero-visuals">
                     <img src="./images/hand-left.png" alt="Left Hand" class="visual-hand visual-hand-left">
                     <div class="macbook-wrapper">
@@ -75,49 +96,102 @@
         </section>
 
         <section class="feature-summarize">
-            <div class="summarize-header">
+            <div class="summarize-header reveal-up">
                 <h2>AI-Powered Summaries</h2>
-                <p>Turn hours of lectures into instantly readable study guides.</p>
+                <p>Turn hours of lectures into instantly readable summarizations.</p>
             </div>
             <div class="summarize-layout">
-                <div class="summarize-box original-text-box">
-                    <div class="box-badge">Live Transcript</div>
-                    <div class="box-content">
-                        <p>"...so the key to digital innovation isn't just about adopting new technology. It's about fundamentally changing how your business operates and delivers value. For example, if you just digitize a bad process, you have a bad digital process. Instead, you need to use AI, automation, and data analytics to rethink the customer experience from the ground up. This shift requires both cultural change and technical execution. Next week we will cover the specific frameworks for implementing these changes..."</p>
+                <div class="summarize-top-row">
+                    <div class="summarize-box original-text-box reveal-up">
+                        <div class="box-badge">Live Transcript</div>
+                        <div class="box-content">
+                            <p>"...so the key to digital innovation isn't just about adopting new technology. It's about fundamentally changing how your business operates and delivers value. For example, if you just digitize a bad process, you have a bad digital process. Instead, you need to use AI, automation, and data analytics to rethink the customer experience from the ground up. This shift requires both cultural change and technical execution. Next week we will cover the specific frameworks for implementing these changes..."</p>
+                        </div>
+                    </div>
+                    <div class="summarize-box summary-text-box reveal-up">
+                        <div class="box-badge badge-ai">NoteWave Summary</div>
+                        <div class="box-content" id="summary-output">
+                            <div class="placeholder-state">
+                                <p>Click "Summarize" to see NoteWave in action.</p>
+                            </div>
+                            <div class="loading-state hidden">
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line w-75"></div>
+                                <br>
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line w-50"></div>
+                            </div>
+                            <div class="result-state hidden">
+                                <h4>Lecture: Digital Innovation</h4>
+                                <ul>
+                                    <li><strong>Core Concept:</strong> It's about fundamentally changing business operations and value delivery, not just adopting tech.</li>
+                                    <li><strong>Pitfall:</strong> Digitizing a bad process just creates a bad digital process.</li>
+                                    <li><strong>Solution:</strong> Use AI, automation, and analytics to rebuild the customer experience.</li>
+                                    <li><strong>Requirements:</strong> Needs both cultural shift and technical execution.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="summarize-action">
+                <div class="summarize-arrow-row reveal-up" aria-hidden="true">
+                    <div class="summarize-arrow">
+                        <span class="summarize-arrow-line"></span>
+                        <span class="summarize-arrow-head"></span>
+                    </div>
+                </div>
+                <div class="summarize-action-wrap reveal-up">
+                    <div class="summarize-action">
                     <button id="trigger-summarize" class="btn-summarize">
                         <span class="btn-text">Summarize</span>
                         <span class="btn-loader hidden"></span>
                     </button>
+                    </div>
                 </div>
-                <div class="summarize-box summary-text-box">
-                    <div class="box-badge badge-ai">NoteWave Summary</div>
-                    <div class="box-content" id="summary-output">
-                        <div class="placeholder-state">
-                            <p>Click "Summarize" to see NoteWave in action.</p>
+            </div>
+        </section>
+
+        <section class="feature-quiz">
+            <div class="quiz-section-header slide-in-right">
+                <div class="quiz-eyebrow">Study Smarter</div>
+                <h2>Instant Practice Quizzes</h2>
+            </div>
+            <div class="quiz-layout">
+                <div class="quiz-demo reveal-up">
+                    <div id="quiz-start-state" class="quiz-start-state">
+                        <button id="generate-quiz" class="btn-quiz btn-quiz-large">Create Quiz</button>
+                    </div>
+                    <div id="quiz-output-card" class="quiz-card quiz-output-card hidden">
+                        <div class="quiz-demo-header">
+                            <span></span>
+                            <span class="quiz-card-label">Week 4</span>
                         </div>
-                        <div class="loading-state hidden">
-                            <div class="skeleton-line"></div>
+                        <div class="quiz-loading-state hidden">
                             <div class="skeleton-line"></div>
                             <div class="skeleton-line w-75"></div>
-                            <br>
                             <div class="skeleton-line"></div>
-                            <div class="skeleton-line w-50"></div>
                         </div>
-                        <div class="result-state hidden">
-                            <h4>Lecture: Digital Innovation</h4>
-                            <ul>
-                                <li><strong>Core Concept:</strong> It's about fundamentally changing business operations and value delivery, not just adopting tech.</li>
-                                <li><strong>Pitfall:</strong> Digitizing a bad process just creates a bad digital process.</li>
-                                <li><strong>Solution:</strong> Use AI, automation, and analytics to rebuild the customer experience.</li>
-                                <li><strong>Requirements:</strong> Needs both cultural shift and technical execution.</li>
-                            </ul>
+                        <div class="quiz-result-state hidden">
+                            <h3>Quick Check</h3>
+                            <p class="quiz-question">What are examples of CAPEX?</p>
+                            <div class="quiz-answer-list" role="list">
+                                <button class="quiz-answer" data-correct="true">Buildings, equipment, and vehicles</button>
+                                <button class="quiz-answer" data-correct="false">Coffee, rent, and printer paper</button>
+                                <button class="quiz-answer" data-correct="false">Discounts, refunds, and dividends</button>
+                            </div>
+                            <p id="quiz-feedback" class="quiz-feedback hidden" aria-live="polite"></p>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="home-cta reveal-up">
+            <div class="home-cta-header">
+                <h2>Join the Waitlist</h2>
+                <p>Get early access and be first to know when the app launches.</p>
+            </div>
+            <a href="./contact.html" class="btn btn-primary">Join the Waitlist</a>
         </section>
     </main>
 
@@ -136,6 +210,20 @@
                 macbook.style.transform = `scale(${scale})`;
             }
         });
+
+        const heroWaitlistBtn = document.querySelector('.btn-hero');
+        const heroInteractive = document.querySelector('.hero-interactive');
+
+        if (heroWaitlistBtn && heroInteractive) {
+            const toggleHeroHover = (isActive) => {
+                heroInteractive.classList.toggle('is-hovered', isActive);
+            };
+
+            heroWaitlistBtn.addEventListener('mouseenter', () => toggleHeroHover(true));
+            heroWaitlistBtn.addEventListener('mouseleave', () => toggleHeroHover(false));
+            heroWaitlistBtn.addEventListener('focus', () => toggleHeroHover(true));
+            heroWaitlistBtn.addEventListener('blur', () => toggleHeroHover(false));
+        }
 
         // Speech Recognition Logic
         const recordBtn = document.getElementById('record-btn');
@@ -216,8 +304,13 @@
             });
         }, observerOptions);
 
-        const fadeElements = document.querySelectorAll('.slide-in-right');
-        fadeElements.forEach(el => observer.observe(el));
+        const fadeElements = document.querySelectorAll('.slide-in-right, .reveal-up');
+        fadeElements.forEach((el, index) => {
+            if (!el.style.transitionDelay) {
+                el.style.transitionDelay = `${Math.min(index * 0.08, 0.32)}s`;
+            }
+            observer.observe(el);
+        });
 
         // Summarize Button Logic
         const summarizeBtn = document.getElementById('trigger-summarize');
@@ -247,6 +340,101 @@
                 }, 2000);
             });
         }
+
+        // Quiz Button Logic
+        const quizBtn = document.getElementById('generate-quiz');
+        const quizOutputCard = document.getElementById('quiz-output-card');
+        const quizStartState = document.getElementById('quiz-start-state');
+
+        if (quizBtn && quizOutputCard && quizStartState) {
+            const quizLoadingState = quizOutputCard.querySelector('.quiz-loading-state');
+            const quizResultState = quizOutputCard.querySelector('.quiz-result-state');
+            const quizAnswers = quizOutputCard.querySelectorAll('.quiz-answer');
+            const quizFeedback = document.getElementById('quiz-feedback');
+
+            quizBtn.addEventListener('click', () => {
+                quizBtn.disabled = true;
+                quizStartState.classList.add('hidden');
+                quizOutputCard.classList.remove('hidden');
+                quizLoadingState.classList.remove('hidden');
+                quizResultState.classList.add('hidden');
+
+                setTimeout(() => {
+                    quizLoadingState.classList.add('hidden');
+                    quizResultState.classList.remove('hidden');
+                    quizFeedback.textContent = '';
+                    quizFeedback.className = 'quiz-feedback hidden';
+                    quizAnswers.forEach(answer => {
+                        answer.disabled = false;
+                        answer.classList.remove('is-correct', 'is-wrong');
+                    });
+                }, 1400);
+            });
+
+            quizAnswers.forEach(answer => {
+                answer.addEventListener('click', () => {
+                    const isCorrect = answer.dataset.correct === 'true';
+
+                    quizAnswers.forEach(option => {
+                        option.disabled = true;
+                        option.classList.remove('is-correct', 'is-wrong');
+                        if (option.dataset.correct === 'true') {
+                            option.classList.add('is-correct');
+                        }
+                    });
+
+                    if (!isCorrect) {
+                        answer.classList.add('is-wrong');
+                    }
+
+                    quizFeedback.textContent = isCorrect
+                        ? 'Correct. Buildings, equipment, and vehicles are examples of CAPEX.'
+                        : 'Not quite. The right answer is buildings, equipment, and vehicles.';
+                    quizFeedback.className = `quiz-feedback ${isCorrect ? 'is-correct' : 'is-wrong'}`;
+                });
+            });
+        }
     </script>
+     /*  Newsletter Signup Form */
+    <section id="newsletter" class="newsletter container">
+  <div class="container-content">
+    <h2>Sign up to our Newsletter</h2>
+
+    <form action="https://formspree.io/f/xdkwqnnb" method="post">
+      
+      <p>
+        <label for="contact-name">Your Name</label>
+        <input id="contact-name" type="text" name="contact-name" required>
+      </p>
+
+      <p>
+        <label for="contact-email">Your Email</label>
+        <input id="contact-email" type="email" name="contact-email" required>
+      </p>
+      <p>
+        <input type="submit" value="Sign up">
+      </p>
+
+    </form>
+  </div>
+</section>
+
+<footer id="footer-layout">
+  <table width="100%">
+    <tr>
+      <td align="center">
+        &copy; <span class="footer-text">NoteWave</span>
+        <span class="footer-separator">&middot;</span>
+        <span class="footer-text">Thank you for visiting our page.</span>
+        <span class="footer-separator">&middot;</span>
+        <a href="https://www.instagram.com/notewave_ac/?hl=en" target="_blank">
+  <span class="footer-text">Follow us on Social Media</span>
+</a>
+      </td>
+      <td align="right" valign="bottom" width="50">
+        <img src="images/notewave_logo.png" height="100" width="100" alt="NoteWave logo - AI-powered academic note-taking app for university students" class="contact-logo">
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
